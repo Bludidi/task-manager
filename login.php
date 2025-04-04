@@ -5,7 +5,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   $username = $_POST['username'];
   $password = $_POST['password'];
 
-
   $query = "SELECT * FROM users WHERE username = '$username'";
   $result = pg_query($db, $query);
 
@@ -43,6 +42,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <input type="password" name="password" required><br>
         <button type="submit">Login</button>
     </form>
-    <p>Don’t have an account? <a href="register.php">Register here</a>.</p>
+    <p class="center_text">Don’t have an account? <a href="register.php">Register here</a>.</p>
 </body>
 </html>
