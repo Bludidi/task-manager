@@ -85,11 +85,10 @@ $ git clone https://github.com/Bludidi/task-manager.git
 $ cd task-manager
 ```
 
-```
-- **Create a `config.php` file in your root directory, paste the below code and replace `your password` with your real database password**
+- Create a `config.php` file in your root directory, paste the below code and replace `your_password_here` with your real database password
 ```
 <?php
-define('DB_PASSWORD', 'Utnubb@83');
+define('DB_PASSWORD', 'your_password_here');
 ?>
 ```
 Run `Xampp` on your computer and start the Apache 
