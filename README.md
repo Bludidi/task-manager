@@ -33,10 +33,10 @@
 
 ## 🛠 Built With <a name="built-with"></a>
 
-Postgres
-PHP
-CSS
-jQuery/JavaScript
+- PostgreSQL (Databases)
+- PHP (Backend)
+- CSS (Styling)
+- JavaScript/jQuery (Frontend)
 
 <!-- Features -->
 
@@ -73,7 +73,7 @@ To get a local copy up and running, follow these steps.
 ### Install & Setup
 
 To setup follow the below steps:
-- Clone this project by the command: 
+- Clone this project by the following command: 
 
 ```
 $ git clone https://github.com/Bludidi/task-manager.git
@@ -98,7 +98,7 @@ Run `Xampp` on your computer and start the Apache
 
 <!-- AUTHORS -->
 
-## 👥 Authors <a name="authors"></a>
+## 👥 Author <a name="authors"></a>
 
 ![my profile](https://avatars.githubusercontent.com/u/86472119?s=40&v=4) **Brian Buntu Ludidi**
 
@@ -120,7 +120,7 @@ Run `Xampp` on your computer and start the Apache
 ## 🔭 Future Features <a name="future-features"></a>
 
 - [ ] Add notification when due date is close.
-- [ ] 
+- [ ] Add task priority.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
