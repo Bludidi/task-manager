@@ -9,7 +9,6 @@ if (!isset($_SESSION['user_id'])) {
   $user_id = $_SESSION['user_id'];
   $query = "SELECT * FROM tasks WHERE user_id = $1";
   $result = pg_query_params($db, $query, array($user_id));
-// echo "Welcome to the Task Manager! User ID " . $_SESSION['user_id'];
 ?>
 
 <!DOCTYPE html>
@@ -68,6 +67,28 @@ if (!isset($_SESSION['user_id'])) {
             ?>
         </tbody>
     </table>
+
+<!-- Edit task modal -->
+    <div id="edit-modal" style="display:none;">
+        <form id="edit-task-form">
+        <h3>Edit Task</h3>
+            <input type="hidden" name="task_id" id="edit-task-id">
+            <label>Title:</label><br>
+            <input type="text" name="title" id="edit-title" required><br>
+            <label>Description:</label><br>
+            <textarea name="description" id="edit-description" required></textarea><br>
+            <label>Due Date (optional):</label><br>
+            <input type="date" name="due_date" id="edit-due_date"><br>
+            <label>Status:</label><br>
+            <select name="status" id="edit-status">
+                <option value="Pending">Pending</option>
+                <option value="In Progress">In Progress</option>
+                <option value="Completed">Completed</option>
+            </select><br>
+            <button type="submit">Save Changes</button>
+            <button type="button" id="cancel-edit">Cancel</button>
+        </form>
+    </div>
 
     <script src="js/index.js"></script>
 </body>
