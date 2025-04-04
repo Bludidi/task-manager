@@ -12,7 +12,6 @@ $result = pg_query_params($db, $query, array($user_id));
 $user = pg_fetch_assoc($result);
 $username = $user ? $user['username'] : 'User';
 $query = "SELECT * FROM tasks WHERE user_id = $1";
-$result = pg_query_params($db, $query, array($user_id));
 ?>
 
 <!DOCTYPE html>
@@ -54,10 +53,6 @@ $result = pg_query_params($db, $query, array($user_id));
 
     <tbody id="task-list">
       <?php
-      // $user_id = $_SESSION['user_id'];
-      // $query = "SELECT * FROM tasks WHERE user_id = $1";
-      // $result = pg_query_params($db, $query, array($user_id));
-      
       if (pg_num_rows($result) > 0) {
         while ($task = pg_fetch_assoc($result)) {
           echo "<tr>";
